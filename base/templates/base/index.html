@@ -1,0 +1,127 @@
+﻿{% load static %}
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+	<!--using FontAwesome-->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+	
+</head>
+
+<body>
+	<section>
+	<!--navigation------------------------->
+	<nav>
+	<!--logo-->
+	<a href="{% url 'index' %}" class="logo">My portfolio</a>
+	<!--menu-->
+	<ul>
+	<li><a href="{% url 'index' %}" class="active">Home</a></li>
+	<li><a href="{% url 'contact' %}">Contact Me</a></li>
+	
+	</ul>
+	<!--bars--------------->
+	<div class="toggle"></div>
+	
+	</nav>
+	<!--text----------------------->
+		<div class="text-container">
+			<p>Hello,</p>
+		    <p>I’M MANZAR</p>
+			<p>Computer Science student who likes to code.</p>
+			<button class="down-cv"><a style="color:#000000;" href="{% static 'files/Mohd Resume.pdf' %}">Download Resume</a></button>
+		</div>
+	<!--model---------------------->
+	<img class="model" src="{% static 'images/wallpaper.png' %}" alt="model">
+	</section>
+	<div class="about-container">
+	<!--img-->
+		<img src="{% static 'images/dp.png' %}">
+	<!--about-me-text-->
+		<div class="about-text">
+			<p style="font-size:32px;">About Me</p>
+			<p style="font-style:italic;"><strong>If you're just curious about me,or you just want to grab my resume, you're in the right spot.</strong></p>
+		<p>Hello, My name is Mohd. Manzar Iqbal and I am a Computer Science student.I am pursuing Master of Computer Application from Maulana Azad National Institute of Technology, Bhopal.I have done my graduation from Jamia Millia Islamia in the field of Mathematics.</p>
+		<p>I do the work I do because I love it. I like the IT industry. I like the people I meet. I embrace the nerd. I like to make the web a better place. Hopefully we cross paths in the real world someday and we can make it a better place together.</p>
+			<button class="down-cv"><a style="color:#ffffff;" href="{% static 'files/Mohd Resume.pdf' %}">Download Resume</a></button>
+		</div>
+	</div>
+ <!--services-container---------------------------->
+	<div class="services ">
+		<!--text-->
+		<div class="services-text ">
+	<p>Experiences</p>
+			<br>
+	<p>When I started college I originally had the idea of going into computer science field. After building my first project in web development, and getting gratification of praise from others, I was hooked. The internet was my outlet. A new way to show and share my passions. I am so happy that I made that decision.</p>
+			</div>
+		<div class="box-container">
+		<!--1------------->
+			<div class="box-1">
+			<span>1</span>
+			<p class="heading">What I know</p>
+			<p class="details">Python, Django, HTML/CSS, data structure, problem soving in C/C++ 
+PS: Working on React, REST API and Machine Learning.</p>
+			
+			</div>
+	   <!--2------------->
+			<div class="box-2">
+			<span>2</span>
+			<p class="heading">My Projects</p>
+			<p class="details">I have build some basic beginner project in django , html and css. I have made a weather application and to-do list which are successfully deployed on heroku server</p>
+			
+			</div>
+		<!--3------------->
+			<div class="box-3">
+			<span>3</span>
+			<p class="heading">How I Learn</p>
+			<p class="details">I learn by Building Ugly Prototypes First.I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>
+			
+			</div>
+		</div>
+	</div>
+	<!--if you have any project in your mind contact me-->
+	<div class="contact-me">
+		<p>If You Have Any Project In Your Mind ?</p>
+		<button><a href="{% url 'contact' %}">Contact me</a></button>
+	</div>
+	<!--footer--------------->
+ <footer>
+	 <!--heading-->
+  <p>Thanks for Visiting My Portfolio Website</p>
+	 <!--paragraph-->
+	 <p>Contact me</p>
+	 <!--social-->
+	<div class="social-icons">
+	<a href="https://www.facebook.com/manzar.iqbal.946/"><i class="fab fa-facebook-f"></i></a>
+	<a href="https://www.linkedin.com/in/mohd-manzar-iqbal-73a928124/"><i class="fab fa-linkedin"></i></a>
+	<a href="https://github.com/manzar97"><i class="fab fa-github"></i></a>
+	</div>
+	 <!--copyright-->
+	 <p class="copyright"></p>
+</footer>
+	<!--social-attach-bar-->
+	<div class="social">
+	<a href="https://www.facebook.com/manzar.iqbal.946/"><i class="fab fa-facebook-f"></i></a>
+	<a href="https://www.linkedin.com/in/mohd-manzar-iqbal-73a928124/"><i class="fab fa-linkedin"></i></a>
+	<a href="https://github.com/manzar97"><i class="fab fa-github"></i></a>
+	
+	</div>
+	<!--JQUery-------------------->
+<script type="text/javascript" src="{% static 'js/JQuery.js' %}"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.toggle').click(function(){
+			$('.toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+		})
+	})
+	
+	
+	</script>
+</body>
+</html>
